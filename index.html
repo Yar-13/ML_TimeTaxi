@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогнозирование заказов такси</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #0366d6;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h2 {
+            color: #0366d6;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        h3 {
+            color: #24292e;
+            margin-top: 24px;
+        }
+        strong {
+            font-weight: 600;
+        }
+        ul, ol {
+            padding-left: 2em;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+        code {
+            background-color: rgba(27, 31, 35, 0.05);
+            border-radius: 3px;
+            padding: 0.2em 0.4em;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 85%;
+        }
+        pre {
+            background-color: #f6f8fa;
+            border-radius: 3px;
+            padding: 16px;
+            overflow: auto;
+            line-height: 1.45;
+        }
+        .container {
+            background-color: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Прогнозирование количества заказов такси на следующий час</h1>
+
+        <h2>Описание проекта</h2>
+        <p>Компания "Жёлтый путь" собрала исторические данные о заказах такси в аэропортах. Цель проекта - разработать модель для прогнозирования количества заказов такси на следующий час, чтобы привлекать больше водителей в периоды пиковой нагрузки.</p>
+        <p><strong>Целевая метрика:</strong> RMSE на тестовой выборке должна быть не более 48.</p>
+
+        <h2>Структура проекта</h2>
+        <ol>
+            <li><strong>Подготовка данных</strong>
+                <ul>
+                    <li>Загрузка и ресемплинг данных по часам</li>
+                    <li>Исследование временного ряда (тренды, сезонность)</li>
+                    <li>Создание признаков (лаги, скользящие статистики и др.)</li>
+                </ul>
+            </li>
+            <li><strong>Анализ данных</strong>
+                <ul>
+                    <li>Визуализация временного ряда</li>
+                    <li>Разведочный анализ (EDA)</li>
+                    <li>Проверка на стационарность</li>
+                </ul>
+            </li>
+            <li><strong>Построение и оценка моделей</strong>
+                <ul>
+                    <li>Линейная регрессия</li>
+                    <li>Решающие деревья</li>
+                    <li>Градиентный бустинг (CatBoost, LightGBM)</li>
+                    <li>Подбор гиперпараметров</li>
+                    <li>Оценка качества моделей</li>
+                </ul>
+            </li>
+            <li><strong>Выводы и рекомендации</strong>
+                <ul>
+                    <li>Выбор лучшей модели</li>
+                    <li>Интерпретация результатов</li>
+                    <li>Рекомендации по использованию</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>Используемые технологии</h2>
+        <ul>
+            <li>Python</li>
+            <li>Pandas, NumPy</li>
+            <li>Scikit-learn, CatBoost, LightGBM</li>
+            <li>Statsmodels</li>
+            <li>Matplotlib, Seaborn</li>
+        </ul>
+
+        <h2>Ключевые этапы</h2>
+        <ol>
+            <li>Загрузка и предварительная обработка данных</li>
+            <li>Генерация признаков для временного ряда</li>
+            <li>Разделение данных на обучающую и тестовую выборки</li>
+            <li>Обучение и оценка различных моделей</li>
+            <li>Подбор гиперпараметров с кросс-валидацией</li>
+            <li>Анализ результатов и выбор лучшей модели</li>
+        </ol>
+    </div>
+</body>
+</html>
